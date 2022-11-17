@@ -26,10 +26,14 @@ act = ActionChains(driver)
 # act.send_keys(Keys.ENTER).perform()
 
 # Short Form
-act.key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL)\
-    .key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL)\
-    .send_keys(Keys.TAB)\
-    .key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL)\
-    .send_keys(Keys.ENTER).perform()
+# act.key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL)\
+#     .key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL)\
+#     .send_keys(Keys.TAB)\
+#     .key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL)\
+#     .send_keys(Keys.ENTER).perform()
 
 # ------------Keyboard Actions End----------------
+
+# -----------Copy Paste--------------
+act.key_down(Keys.CONTROL).key_down(
+    Keys.SHIFT).send_keys(Keys.ARROW_LEFT).send_keys(Keys.ARROW_LEFT).perform()
