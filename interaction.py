@@ -17,11 +17,19 @@ driver.get(URL)
 driver.find_element(By.ID, "email").send_keys("manish@gmail.com")
 
 act = ActionChains(driver)
-act.key_down(Keys.CONTROL).send_keys(
-    "a").key_up(Keys.CONTROL).perform()
-act.key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL).perform()
-act.send_keys(Keys.TAB).perform()
-act.key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL).perform()
-act.send_keys(Keys.ENTER).perform()
+# Long Form
+# act.key_down(Keys.CONTROL).send_keys(
+#     "a").key_up(Keys.CONTROL).perform()
+# act.key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL).perform()
+# act.send_keys(Keys.TAB).perform()
+# act.key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL).perform()
+# act.send_keys(Keys.ENTER).perform()
+
+# Short Form
+act.key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL)\
+    .key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL)\
+    .send_keys(Keys.TAB)\
+    .key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL)\
+    .send_keys(Keys.ENTER).perform()
 
 # ------------Keyboard Actions End----------------
