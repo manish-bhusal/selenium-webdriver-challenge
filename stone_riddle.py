@@ -11,6 +11,7 @@ chrome_driver_path = Service(
 
 driver = webdriver.Chrome(options=options, service=chrome_driver_path)
 URL = "https://techstepacademy.com/trial-of-the-stones"
+# driver.maximize_window() makes current window fullscreen.
 driver.maximize_window()
 driver.get(URL)
 input_first = driver.find_element(By.NAME, "r1Input")
